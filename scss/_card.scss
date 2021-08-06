@@ -1,0 +1,99 @@
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+  width: 450px;
+  max-width: 100%;
+
+  #{&}__img {
+    height: fit-content;
+  }
+
+  #{&}__cont {
+    padding: 3.125rem;
+
+    & h2 {
+      font-size: 27px;
+      font-weight: 900;
+      color: $dark-blue;
+      margin-bottom: 2rem;
+    }
+
+    & p {
+      line-height: 1.6;
+      color: $desaturated-blue;
+    }
+
+    & .plan {
+      background: $v-pale-blue;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.625rem;
+      margin-top: 1.625rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+
+      & .plan__info {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+
+        & img {
+          grid-row: span 2;
+        }
+
+        & span {
+          font-weight: 700;
+          &:first-of-type {
+            color: $dark-blue;
+          }
+          &:last-of-type {
+            color: $desaturated-blue;
+          }
+        }
+      }
+
+      & a {
+        color: $bright-blue;
+        font-weight: 700;
+        &:hover {
+          text-decoration: none;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  & .order {
+    display: flex;
+    flex-direction: column;
+
+    & a {
+      padding: 1rem 0;
+      font-weight: 700;
+
+      &:first-of-type {
+        background: $bright-blue;
+        color: #fff;
+        border-radius: 20px;
+        text-decoration: none;
+        box-shadow: $bright-blue 0px 1px 1px 0px inset,
+          $bright-blue 0px 50px 100px -20px, $bright-blue 0px 30px 60px -30px;
+
+        &:hover {
+          background: hsl(245, 77%, 62%);
+        }
+      }
+
+      &:last-of-type {
+        text-decoration: none;
+        color: $desaturated-blue;
+
+        &:hover {
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}
